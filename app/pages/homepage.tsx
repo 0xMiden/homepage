@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Container, Header } from "~/components/container";
+import Newsletter from "~/components/newsletter";
 import { cn } from "~/lib/utils";
 
 export type Investor = {
@@ -15,7 +16,7 @@ export function PageHome({
 }) {
   return (
     <Container className="flex-1">
-      <Header>
+      <Header className="[&_h2]:uppercase">
         <h2>Miden is the Edge Blockchain</h2>
         <p>
           Miden grants applications the power to scale with public and private
@@ -35,7 +36,7 @@ export function PageHome({
       </Header>
 
       <div className="mt-16">
-        <h3 className="font-sans font-semibold text-2xl text-balance">
+        <h3 className="font-dm-mono font-semibold text-2xl text-balance">
           The way blockchains were always meant to work
         </h3>
         <ol className="flex flex-col gap-8 mt-6">
@@ -65,7 +66,7 @@ export function PageHome({
       </div>
 
       <div className="mt-16">
-        <h3 className="font-sans font-semibold text-2xl text-balance">
+        <h3 className="font-dm-mono font-semibold text-2xl text-balance">
           Our investors
         </h3>
         <ul className="gap-4 grid grid-cols-2 md:grid-cols-4 mt-6">
@@ -82,6 +83,9 @@ export function PageHome({
           ))}
         </ul>
       </div>
+
+
+      <Newsletter />
     </Container>
   );
 }
